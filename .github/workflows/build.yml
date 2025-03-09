@@ -31,6 +31,15 @@ jobs:
       - name: install nextest
         uses: taiki-e/install-action@nextest
       - uses: Swatinem/rust-cache@v2
+      - name: Install protoc
+        run: |
+          sudo apt-get install protobuf-compiler
+      - name: Set PROTOC environment variable
+        run: |
+          echo "PROTOC=/usr/bin/protoc" >> $GITHUB_ENV
+      - name: Build project
+        run: |
+          cargo build
       - name: Check code format
         run: cargo fmt -- --check
       - name: Check the package for errors
