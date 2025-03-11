@@ -31,3 +31,5 @@ cargo deny check licenses
 - <https://docs.rs/tonic/latest/tonic/>
 - <https://docs.rs/tonic-build/latest/tonic_build/>
 - <https://docs.rs/tonic-build/latest/tonic_build/struct.Builder.html>
+- <https://docs.rs/tokio/latest/tokio/sync/broadcast/index.html>
+- <https://docs.rs/tokio-stream/latest/tokio_stream/wrappers/struct.UnboundedReceiverStream.html>
