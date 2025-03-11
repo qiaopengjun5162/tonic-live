@@ -43,5 +43,5 @@ fn main() {
 
     println!("cargo:rerun-if-changed=abi.proto"); // 如果 abi.proto 文件发生变化，重新运行构建脚本
     println!("cargo:rerun-if-changed=build.rs"); // 如果 build.rs
-                                                 // 文件发生变化，重新运行构建脚本
+    // 文件发生变化，重新运行构建脚本
 }

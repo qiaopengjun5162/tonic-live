@@ -5,13 +5,13 @@ use lazy_static::lazy_static;
 use std::{ops::Deref, str::FromStr, sync::Arc};
 use tonic::{
     metadata::AsciiMetadataValue,
-    service::{interceptor::InterceptedService, Interceptor},
+    service::{Interceptor, interceptor::InterceptedService},
     transport::Channel,
 };
 use tracing::info;
 
 use crate::pb::{
-    chat_client::ChatClient, ChatMessage, GetMessagesRequest, LoginRequest, NewChatMessage, Token,
+    ChatMessage, GetMessagesRequest, LoginRequest, NewChatMessage, Token, chat_client::ChatClient,
 };
 
 lazy_static! {

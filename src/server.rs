@@ -2,8 +2,8 @@ use std::pin::Pin;
 
 use crate::pb::chat_server::ChatServer;
 use crate::pb::{
-    chat_server::Chat, ChatMessage, GetMessagesRequest, LoginRequest, NewChatMessage,
-    SendMessageResponse, Token,
+    ChatMessage, GetMessagesRequest, LoginRequest, NewChatMessage, SendMessageResponse, Token,
+    chat_server::Chat,
 };
 use std::result::Result;
 use tokio::sync::{broadcast, mpsc};

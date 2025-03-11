@@ -24,6 +24,11 @@ repos:
         language: rust
         files: \.rs$
         exclude: src/pb/.*\.rs$
+      - id: taplo-fmt
+        name: Format TOML
+        entry: bash -c 'taplo fmt --option reorder_keys=true --check'
+        language: rust
+        files: \.toml$
       - id: cargo-deny
         name: cargo deny check
         description: Check cargo dependencies

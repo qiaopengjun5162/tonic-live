@@ -1,5 +1,5 @@
 # 稳定版支持的配置
+chain_width = 80
 edition = "2021"
 max_width = 100
 wrap_comments = true
-chain_width = 80

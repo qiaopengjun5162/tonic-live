@@ -1,21 +1,10 @@
 [package]
-edition = "2021"
+edition = "2024"
 license = "MIT"
 name = "tonic-live"
 version = "0.1.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-[profile.release]
-codegen-units = 1 # 限制代码生成单元为1，有助于优化
-lto = "fat"       # 启用完整链接时优化
-panic = "abort"   # panic 时直接终止程序
-strip = true      # 剥离调试信息
-
-[profile.profiling]
-debug = "full"       # 包含完整调试信息
-inherits = "release" # 继承 release 配置
-strip = false        # 不剥离调试信息
-
 [dependencies]
 anyhow = "1.0.97"                                      # 错误处理库
 arc-swap = "1.7.1"
@@ -23,7 +12,7 @@ chrono = "0.4.40"
 dashmap = "6.1.0"
 lazy_static = "1.5.0"
 prost = "0.13.5"                                       # Protocol Buffers 实现
-serde = { version = "1.0.218", features = ["derive"] }
+serde = { version = "1.0.219", features = ["derive"] }
 tokio = { version = "1.44.0", features = ["full"] }    # 异步运行时
 tokio-stream = "0.1.17"
 tonic = "0.12.3"                                       # gRPC 框架
