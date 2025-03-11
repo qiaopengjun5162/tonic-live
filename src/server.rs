@@ -113,3 +113,17 @@ fn get_username(ext: &Extensions) -> Result<String, Status> {
         Err(Status::unauthenticated("Invalid token"))
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[tokio::test]
+    async fn test_check_auth() {
+        let mut req = Request::new(());
+        req.metadata_mut().insert("authorization", "Bearer test-token".parse().unwrap());
+        let req = check_auth(req).unwrap();
+        let token = req.extensions().get::<Token>().unwrap();
+        assert!(token.is_valid());
+    }
+}
